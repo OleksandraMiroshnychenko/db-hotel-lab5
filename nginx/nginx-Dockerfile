@@ -1,0 +1,10 @@
+FROM nginx
+
+# Стандартний сервер "localhost" з образу nginx перехоплював запити на localhost
+# і віддавав 404 замість потрібної відповіді. Прибираємо його, щоб працювали
+# і localhost, і 127.0.0.1.
+RUN rm -f /etc/nginx/conf.d/default.conf
+
+COPY custom.conf /etc/nginx/conf.d/custom.conf
+
+CMD ["nginx", "-g", "daemon off;"]

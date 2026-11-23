@@ -1,0 +1,10 @@
+# дані PostgreSQL (створюються при першому старті контейнера)
+postgres/data/
+# журнали nginx
+nginx/logs/*
+!nginx/logs/.gitkeep
+# Python
+__pycache__/
+*.pyc
+.venv/
+.idea/
