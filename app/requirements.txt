@@ -1,0 +1,4 @@
+bottle==0.13.4
+SQLAlchemy>=2.0,<2.2
+psycopg2-binary>=2.9
+uwsgi>=2.0.26
